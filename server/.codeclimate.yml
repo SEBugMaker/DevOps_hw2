@@ -1,0 +1,44 @@
+version: "11031627"
+checks:
+  argument-count:
+    config:
+      threshold: 7
+  complex-logic:
+    config:
+      threshold: 30
+  file-lines:
+    config:
+      threshold: 300
+  method-count:
+    config:
+      threshold: 20
+  method-complexity:
+    config:
+      threshold: 30
+  method-lines:
+    config:
+      threshold: 250
+  nested-control-flow:
+    config:
+      threshold: 10
+  cognitive-complexity:
+    config:
+      threshold: 10
+  return-statements:
+    config:
+      threshold: 4
+
+
+plugins:
+  duplication:
+    enabled: true
+    config:
+      languages:
+        java:
+          mass_threshold: 100
+
+exclude_patterns:
+  - "spec/**/*"
+  - "tests/**/*"
+  - "config/**/*"
+  - "vendor/**/*"
